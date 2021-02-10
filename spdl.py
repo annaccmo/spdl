@@ -25,9 +25,9 @@ def modelCheck (initialState, finalState, actions):
                             return statesStack
                     i=0
                 else:
-                    i++
-             else:
-                i++
+                    i+=1
+            else:
+                i+=1
         if i>actions.len():
             break
 
