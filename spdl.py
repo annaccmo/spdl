@@ -11,6 +11,7 @@ def modelCheck (initialState, finalState, actions):
         difStates = (finalState - initialState) | (initialState - finalState)
 
     statesStack = []
+    i = 0
     while True: #Pensar numa condição de parada
         for a in actions:
 
@@ -22,5 +23,12 @@ def modelCheck (initialState, finalState, actions):
                         actual = newState
                         if (newState <= initialState) or (initialState <= newState):#faz sentido essa condição?
                             return statesStack
+                    i=0
+                else:
+                    i++
+             else:
+                i++
+          if i>actions.len():
+            break
 
         statesStack.append(actual)
