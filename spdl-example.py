@@ -1,4 +1,4 @@
-from spdl import *
+from spdl import modelCheck as modelCheck
 
 #actions
 class Stack:
@@ -72,4 +72,4 @@ initialState = {'AonTable', 'BonTable', 'ClearA', 'ClearB', 'ClearC'}
 finalState = {'AonTable', 'BonA', 'ConB', 'ClearC'}
 
 #Model Checking
-spdl.modelCheck (initialState, finalState, actions)
+modelCheck (initialState, finalState, actions)
