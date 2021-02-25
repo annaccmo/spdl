@@ -28,7 +28,7 @@ def modelCheck (initialState, finalState, actions):
                     i+=1
             else:
                 i+=1
-        if i>actions.len():
+        if i>len(actions):
             break
 
         statesStack.append(actual)
