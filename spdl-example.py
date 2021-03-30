@@ -30,7 +30,7 @@ class Unstack:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.preCond = {str(x)+'On'+str(y)} 
+        self.preCond = {str(x)+'On'+str(y), 'Clear'+str(x)} 
         self.addCond = {str(x)+'onTable', 'Clear'+str(y)}
         self.delCond = {str(x)+'On'+str(y)} 
         self.name = 'Unstack'
@@ -69,7 +69,7 @@ actions = [stackAB.conditions(), stackBA.conditions(), stackAC.conditions(), sta
 initialState = {'AonTable', 'BonTable', 'ClearA', 'ClearB', 'ClearC'}
 
 #Final State
-finalState = {'AonTable', 'BonA', 'ConB', 'ClearC'}
+finalState = {'AonTable', 'BOnA', 'COnB', 'ClearC'}
 
 #Model Checking
-modelCheck (initialState, finalState, actions)
+print(modelCheck (initialState, finalState, actions))
