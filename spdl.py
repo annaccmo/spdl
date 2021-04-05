@@ -11,13 +11,13 @@ def modelCheck (initialState, finalState, actions):
         
         #difStates = (finalState - initialState) | (initialState - finalState)
 
-    statesStack = []
+    statesStack = [actual]
     actionStack = []
     i = 0
     while True: #Pensar numa condição de parada
         for a in actions:
             if a['add'] <= actual and ((a['del'] & actual) == set()):
-                newState = (actual - a['add']) | a['del'] 
+                newState = (actual - a['add']) | a['del']
                 if a['pre'] <= newState and not(newState in statesStack):
                     #difNew = (newState - initialState) | (initialState - newState)
                     #if difStates > difNew:
