@@ -7,6 +7,7 @@ def modelCheck (initialState, finalState, actions):
 
     if finalState != initialState:
         actual = finalState
+        actualaction = {}
         
         #difStates = (finalState - initialState) | (initialState - finalState)
 
@@ -21,8 +22,11 @@ def modelCheck (initialState, finalState, actions):
                     #difNew = (newState - initialState) | (initialState - newState)
                     #if difStates > difNew:
                     actual = newState
-                    actionStack.append(a)
+                    actualaction = a
+                    #actionStack.append(a)
                     if (newState <= initialState) or (initialState <= newState):#faz sentido essa condição?
+                        statesStack.append(actual)
+                        actionStack.append(actualaction) 
                         return statesStack, actionStack
                     i=0
                 else:
@@ -33,3 +37,4 @@ def modelCheck (initialState, finalState, actions):
             break
 
         statesStack.append(actual)
+        actionStack.append(actualaction)
