@@ -10,6 +10,8 @@ def modelCheck (initialState, finalState, actions):
         actualaction = {}
         
         #difStates = (finalState - initialState) | (initialState - finalState)
+    else:
+        print("Final amd initial states are the same" + "\n" + finalState)
 
     statesStack = [actual]
     actionStack = []
