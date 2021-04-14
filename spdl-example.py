@@ -74,5 +74,5 @@ finalState = {'AonTable', 'BOnA', 'COnB', 'ClearC'}
 #Model Checking
 s,a = modelCheck (initialState, finalState, actions)
 
-print("States:  "+str(s)+"\n"+"Actions:  "+str(a))
+print("States:  \n\t"+str(s)+"\n\n"+"Actions:  \n\t"+str(a))
 
